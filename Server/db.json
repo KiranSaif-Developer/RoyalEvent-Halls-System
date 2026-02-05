@@ -1,0 +1,204 @@
+{
+  "users": [
+    {
+      "id": "Leo Johnson",
+      "email": "test@example.com",
+      "password": "...",
+      "role": "client",
+      "phone": "555-123-4567"
+    },
+   
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@venue.com",
+      "password": "root",
+      "role": "admin"
+    }
+    
+  ],
+  "venues": [
+    {
+      "name": "The Conference Hub",
+      "location": "West Side Business Park, Suite 402",
+      "price": "20000",
+      "rate": "20000",
+      "capacity": "300",
+      "description": "The Conference Hub is a premier, state-of-the-art venue designed to host impactful corporate events, seminars, and professional gatherings. We provide a seamless environment where technology meets comfort, ensuring that your ideas take center stage.",
+      "image_urls": [
+        "https://i.pinimg.com/1200x/13/43/f9/1343f9a195cbdc2e437c0f833f460866.jpg",
+        "https://i.pinimg.com/736x/7b/38/23/7b382362e7f0404072db48e29a232d11.jpg",
+        "https://i.pinimg.com/736x/b7/67/43/b767434ae1ef1317d9b8f76679d2e5ab.jpg",
+        "https://i.pinimg.com/1200x/62/cb/a0/62cba0bba0889b027a2435e47ce6f7ab.jpg",
+        "https://i.pinimg.com/736x/5e/a8/1b/5ea81bd967c397554e248ac836777204.jpg",
+        "https://i.pinimg.com/736x/4e/b2/eb/4eb2eb200b8c12dbfb8eea56fefe31c2.jpg",
+        "https://i.pinimg.com/736x/d9/fb/3f/d9fb3fd39c9ecc6ab29c21f65776f5e1.jpg",
+        "https://i.pinimg.com/1200x/7f/3d/de/7f3dde76547a6a30a4ae95a9240ad894.jpg",
+        "https://i.pinimg.com/736x/01/e2/00/01e200667b68967355b93bc77490ad90.jpg"
+      ],
+      "image": "https://i.pinimg.com/1200x/13/43/f9/1343f9a195cbdc2e437c0f833f460866.jpg",
+      "id": "2"
+    },
+    {
+      "name": "The Skylight Conservatory",
+      "location": "Downtown Rooftop",
+      "price": "30000",
+      "rate": "30000",
+      "capacity": "240",
+      "description": "The Skylight Conservatory aik aisi jagah hai jahan architecture aur nature ka haseen milap hota hai. Ye company high-end glass structures, sunrooms, aur custom-designed conservatories banane mein maharat rakhti hai, jo aapke ghar ya workplace ko natural roshni se bhar dete hain.",
+      "image_urls": [
+        "https://i.pinimg.com/1200x/55/8d/08/558d08379862f225d10472a470fee331.jpg",
+        "https://i.pinimg.com/736x/66/57/ee/6657ee7a00fac9098814ff5d68705ea6.jpg",
+        "https://i.pinimg.com/736x/bd/23/8c/bd238cacbce2b432e071c52640a17084.jpg",
+        "https://i.pinimg.com/736x/0e/59/87/0e5987c06786868c88cde0f63cc18b7d.jpg",
+        "https://i.pinimg.com/1200x/31/11/e5/3111e53b435ff4324efb682db7925300.jpg",
+        "https://i.pinimg.com/1200x/b6/cd/e6/b6cde61edfc261fedaaf796642ddd5d1.jpg",
+        "https://i.pinimg.com/1200x/4f/5c/b9/4f5cb91118b5b8434de67c97cb1107ce.jpg",
+        "https://i.pinimg.com/1200x/57/1f/3f/571f3fe5a6f58eeec8995ff75501cb52.jpg"
+      ],
+      "image": "https://i.pinimg.com/1200x/55/8d/08/558d08379862f225d10472a470fee331.jpg",
+      "id": "3"
+    },
+    {
+      "name": "The Foundry Loft",
+      "location": "45 West Warehouse Ave, Corner of 5th St, Behind Old Iron Works Building",
+      "price": "85000",
+      "rate": "85000",
+      "capacity": "500",
+      "description": "The Foundry Loft is a unique, industrial-chic space that blends urban heritage with modern luxury. Characterized by its exposed brick walls, soaring high ceilings, and massive steel-framed windows, it provides an inspiring backdrop for creative professionals and modern dwellers alike.",
+      "image_urls": [
+        "https://i.pinimg.com/736x/f4/57/eb/f457ebb2141abb19e00c5c2b0c24c5c7.jpg",
+        "https://i.pinimg.com/736x/f5/be/9d/f5be9d7619d9670a1e6cee444c885c5b.jpg",
+        "https://i.pinimg.com/1200x/58/87/9d/58879d08ceb205a7ea4b425cda0f8582.jpg",
+        "https://i.pinimg.com/736x/b9/f6/7f/b9f67f589423ec719639216e1dc091d4.jpg",
+        "https://i.pinimg.com/1200x/e2/68/8f/e2688f1b6514c99b871f690cedf4c412.jpg",
+        "https://i.pinimg.com/1200x/79/40/33/794033a548529b68b3a58dc4b88e6c7b.jpg",
+        "https://i.pinimg.com/1200x/1e/ff/af/1effaf41f36504ce1502f486f1cab142.jpg",
+        "https://i.pinimg.com/1200x/1e/ff/af/1effaf41f36504ce1502f486f1cab142.jpg",
+        "https://i.pinimg.com/1200x/4f/5c/b9/4f5cb91118b5b8434de67c97cb1107ce.jpg"
+      ],
+      "image": "https://i.pinimg.com/736x/f4/57/eb/f457ebb2141abb19e00c5c2b0c24c5c7.jpg",
+      "id": "4"
+    },
+    {
+      "name": "The Mariner's Deck",
+      "location": "South Pier 7, Waterfront Boardwalk, Opposite the Historic Lighthouse.",
+      "price": "53000",
+      "rate": "53000",
+      "capacity": "290",
+      "description": "The Mariner's Deck is an exquisite waterfront venue and lounge designed for those who seek the perfect balance of adventure and relaxation. Inspired by the classic maritime aesthetic, this space offers panoramic views and a serene atmosphere, making it ideal for high-end social gatherings and sunset events.",
+      "image_urls": [
+        "https://i.pinimg.com/1200x/67/59/8f/67598ff1b40e4aaede10364fb577034c.jpg",
+        "https://i.pinimg.com/1200x/28/ea/b0/28eab028f7704deca6a3358755a40070.jpg",
+        "https://i.pinimg.com/736x/ce/9b/7a/ce9b7a778410d1a962bbcf3679fab895.jpg",
+        "https://i.pinimg.com/736x/a6/a8/6f/a6a86fbf98244ab260b973a1446968ce.jpg",
+        "https://i.pinimg.com/1200x/cb/92/63/cb92633766eaf8c0b6805b5d5bd5018a.jpg",
+        "https://i.pinimg.com/1200x/74/7f/25/747f25f60bc142389825c1d0cd76c937.jpg",
+        "https://i.pinimg.com/736x/2c/d8/42/2cd8428e02aa40e9db741debf1512b30.jpg",
+        "https://i.pinimg.com/736x/2c/d8/42/2cd8428e02aa40e9db741debf1512b30.jpg",
+        "https://i.pinimg.com/736x/39/18/b8/3918b882cd5b6c6a6ac0cf2839ab1c16.jpg",
+        "https://i.pinimg.com/736x/67/83/d0/6783d0a8abb48e3bfc1829d3e77c8139.jpg"
+      ],
+      "image": "https://i.pinimg.com/1200x/67/59/8f/67598ff1b40e4aaede10364fb577034c.jpg",
+      "id": "5"
+    },
+    {
+      "name": "Zen Garden House",
+      "location": "14 Redwood Creek Lane, Secluded Residential Area, Near Willow Park.",
+      "price": "78000",
+      "rate": "78000",
+      "capacity": "400",
+      "description": "Zen Garden House is a sanctuary of peace and minimalist beauty. Inspired by traditional Japanese aesthetics and modern architectural principles, this space is designed to foster mindfulness, meditation, and deep relaxation. It is where simplicity meets soulful living.",
+      "image_urls": [
+        "https://i.pinimg.com/736x/d1/cb/47/d1cb476012b0bd944dd358848ef1e12f.jpg",
+        "https://i.pinimg.com/1200x/00/6a/be/006abe290ce9459ba637493395920ff3.jpg",
+        "https://i.pinimg.com/1200x/a9/06/14/a90614482cd61bedc18346d19bdc10f2.jpg",
+        "https://i.pinimg.com/736x/ed/f9/81/edf981e14d34f5edb51cfdd9bf9137b0.jpg",
+        "https://i.pinimg.com/736x/8f/1c/bc/8f1cbcbb6fcce496006937e02625c7ba.jpg",
+        "https://i.pinimg.com/1200x/b3/26/97/b3269745a9c36e75815f8bf4d4d90363.jpg",
+        "https://i.pinimg.com/1200x/57/54/36/5754361a7140196571a95b654c90a135.jpg"
+      ],
+      "image": "https://i.pinimg.com/736x/d1/cb/47/d1cb476012b0bd944dd358848ef1e12f.jpg",
+      "id": "6"
+    },
+    {
+      "name": "The Willow Creek Hall",
+      "location": "45 River View Drive, Suburbia, 54001",
+      "price": "67000",
+      "rate": "67000",
+      "capacity": "350",
+      "description": "A charming, rustic venue ideal for mid-sized gatherings, birthday parties, and acoustic concerts. Features a large stone fireplace and an outdoor patio overlooking a small creek.",
+      "image_urls": [
+        "https://i.pinimg.com/736x/b1/29/29/b129298d985556d07a0ee2d735b7ee2c.jpg",
+        "https://i.pinimg.com/736x/05/f6/5f/05f65f148d4ec09e65a64ee54e0abb8c.jpg",
+        "https://i.pinimg.com/736x/21/8b/bc/218bbc9d6ff1a0aa2d7303465566c6c5.jpg",
+        "https://i.pinimg.com/736x/72/a3/47/72a3478111e2038818ba00681b9aec8b.jpg",
+        "https://i.pinimg.com/1200x/40/ff/80/40ff80cc4536b7df02790644b873e2e0.jpg",
+        "https://i.pinimg.com/736x/b9/19/54/b919543f356f00fab3e27dc0cde1c440.jpg",
+        "https://i.pinimg.com/1200x/e0/b9/60/e0b960e9452b1438d264431d4e748fb6.jpg",
+        "https://i.pinimg.com/1200x/d3/34/31/d3343173e2c7527c1ee1814d295c14f4.jpg",
+        "https://i.pinimg.com/1200x/d3/34/31/d3343173e2c7527c1ee1814d295c14f4.jpg",
+        "https://i.pinimg.com/736x/41/83/91/418391d1c4062fa787d07498457eef3a.jpg",
+        "https://i.pinimg.com/736x/7f/ab/79/7fab79f54c3a3214d152a99a941c0a1c.jpg"
+      ],
+      "image": "https://i.pinimg.com/736x/b1/29/29/b129298d985556d07a0ee2d735b7ee2c.jpg",
+      "id": "0dd4"
+    },
+    {
+      "name": "Qasar-e-Noor",
+      "location": "one Unit Chawk Bahwalpur",
+      "price": "75000",
+      "rate": "75000",
+      "capacity": "400",
+      "description": "Qasar-e-Noor is an epitome of royal grandeur and architectural brilliance. Designed to host the most prestigious celebrations, this venue combines classical eastern heritage with modern luxury. It is a place where every event is transformed into a majestic experience fit for royalty.",
+      "image_urls": [
+        "https://i.pinimg.com/1200x/c1/79/89/c1798951829920d6ce16579aa8d4b036.jpg",
+        "https://i.pinimg.com/736x/8c/88/33/8c8833fc26d8488b2c07796f2794d565.jpg",
+        "https://i.pinimg.com/736x/b3/de/18/b3de1886acf8cf39b3f539e3ee92a9b3.jpg",
+        "https://i.pinimg.com/736x/a2/47/ab/a247abcc6d3af966862d0513f58b0449.jpg",
+        "https://i.pinimg.com/736x/58/a4/e1/58a4e1d4a18d717fee818d3dcb5e4f52.jpg",
+        "https://i.pinimg.com/736x/68/67/68/68676850f69edb15880a6b9e087ead5d.jpg",
+        "https://i.pinimg.com/1200x/22/5c/dd/225cdde03197860655f16ca71946540a.jpg",
+        "https://i.pinimg.com/736x/48/c4/2d/48c42d5dd14ff8125b5891618f3d2b83.jpg",
+        "https://i.pinimg.com/1200x/36/83/c2/3683c2fc8c85a1226fdcf80033e78df5.jpg"
+      ],
+      "image": "https://i.pinimg.com/1200x/c1/79/89/c1798951829920d6ce16579aa8d4b036.jpg",
+      "id": "7879"
+    },
+    {
+      "name": "The Serenity Retreat",
+      "location": "Hillside Avenue, Margalla Foothills, Islamabad",
+      "price": "20000",
+      "rate": "20000",
+      "capacity": "200",
+      "description": "A peaceful escape featuring panoramic mountain views, open-air yoga decks, and minimalist eco-friendly cabins. Perfect for wellness workshops, meditation sessions, and intimate corporate retreats away from the city noise.",
+      "image_urls": [
+        "https://i.pinimg.com/1200x/bc/ed/83/bced831302f3e0a5690126df232a964b.jpg",
+        "https://i.pinimg.com/1200x/27/7d/1c/277d1cc642164721b5eae283c3f25c89.jpg",
+        "https://i.pinimg.com/1200x/25/37/cd/2537cda6902deb7ce21c9863619f337d.jpg",
+        "https://i.pinimg.com/736x/99/fe/33/99fe33274f6503dccba1e03d57171000.jpg",
+        "https://i.pinimg.com/1200x/fe/b9/44/feb944700cbdaf22a315c300c15d3c33.jpg",
+        "https://i.pinimg.com/736x/a8/e4/76/a8e4762fe0ce3235ce9c82576e77e12f.jpg",
+        "https://i.pinimg.com/736x/a9/d0/d7/a9d0d70cb8643da7a7d50bf8eea44c29.jpg",
+        "https://i.pinimg.com/736x/66/0e/4d/660e4d0f151c1af22e3cd3424ddd52e8.jpg",
+        "https://i.pinimg.com/1200x/67/6a/7d/676a7d90d7e49b6a75bb465220470d9d.jpg"
+      ],
+      "image": "https://i.pinimg.com/1200x/bc/ed/83/bced831302f3e0a5690126df232a964b.jpg",
+      "id": "a31f"
+    }
+  ],
+  "bookings": [
+   
+    {
+      "id": "cd1e",
+      "venue_id": "2",
+      "client_id": "1dd3",
+      "client_name_at_booking": "KIRANSAIF.GUL",
+      "client_phone_at_booking": "03464355105",
+      "start_time": "2026-01-16T08:46:00.000Z",
+      "end_time": "2026-01-14T08:46:00.000Z",
+      "status": "rejected",
+      "requested_on": "2026-01-05T08:46:59.585Z"
+    }
+  ]
+}
