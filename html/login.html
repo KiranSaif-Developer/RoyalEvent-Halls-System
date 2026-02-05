@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Login</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+    <header>
+        <h1>System Login</h1>
+        <nav>
+            <a href="index.html">← Public Venues</a>
+        </nav>
+    </header>
+
+    <main>
+        <h3>Sign In</h3>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required> 
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+            <p id="error-message" style="color: red; margin-top: 10px;"></p>
+        </form>
+    </main>
+
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>
