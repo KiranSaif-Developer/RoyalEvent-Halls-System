@@ -1,12 +1,13 @@
 const BIN_URL = 'https://api.jsonbin.io/v3/b/6a3c2408da38895dfef8e2ef';
-const API_KEY = '$2a$10$jXZH5q6tHcuU32mDjyCspOYf.np3avwl8raUQoM0ShCAuEDqHGY4y'; // <-- API KEY YAHAN DAALNI HAI!
+// ⚠️ Yahan apni asli Master Key daalo jo $2a$10$ se shuru hoti hai
+const API_KEY = '$2a$10$jXZH5q6tHcuU32mDjyCspOYf.np3avwl8raUQoM0ShCAuEDqHGY4y'; 
 
 // Helper function: JSONBin se poora data read karne ke liye
 const fetchBinData = async () => {
     const response = await fetch(BIN_URL, {
         headers: { 
             "X-Bin-Meta": "false",
-            "X-Master-Key": API_KEY  // <-- Chabi laga di
+            "X-Master-Key": API_KEY  
         }
     });
     if (!response.ok) throw new Error("JSONBin fetch failed");
@@ -19,15 +20,13 @@ const updateBinData = async (newData) => {
         method: 'PUT',
         headers: { 
             'Content-Type': 'application/json',
-            "X-Master-Key": API_KEY // <-- Yahan bhi chabi laga di
+            "X-Master-Key": API_KEY 
         },
         body: JSON.stringify(newData)
     });
     if (!response.ok) throw new Error("JSONBin update failed");
     return await response.json();
 };
-
-// ... ISKE NEECHE WALA BAQI SARA CODE WAISE HI REHNE DO (export const getData... wagera) ...
 
 export const getData = async (endpoint, id = null) => {
     try {
@@ -47,10 +46,7 @@ export const postData = async (endpoint, payload) => {
     try {
         const data = await fetchBinData();
         if (!data[endpoint]) data[endpoint] = [];
-        
-        // Auto-generate ID if not present
         if (!payload.id) payload.id = String(Date.now());
-        
         data[endpoint].push(payload);
         await updateBinData(data);
         return payload;
@@ -65,7 +61,6 @@ export const putData = async (endpoint, id, payload) => {
         const data = await fetchBinData();
         const array = data[endpoint] || [];
         const index = array.findIndex(item => String(item.id) === String(id));
-        
         if (index !== -1) {
             array[index] = { ...array[index], ...payload };
             await updateBinData(data);
@@ -83,7 +78,6 @@ export const deleteData = async (endpoint, id) => {
         const data = await fetchBinData();
         const array = data[endpoint] || [];
         const filtered = array.filter(item => String(item.id) !== String(id));
-        
         data[endpoint] = filtered;
         await updateBinData(data);
         return { success: true };
@@ -92,8 +86,6 @@ export const deleteData = async (endpoint, id) => {
         throw error;
     }
 };
-
-// --- Baqi Saare Functions Jo Tumhare Components Use Karte Hain ---
 
 export const fetchUsers = () => getData('users');
 export const fetchUserById = (id) => getData('users', id);
