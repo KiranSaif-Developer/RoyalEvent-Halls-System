@@ -6,7 +6,9 @@
       "email": "admin@venue.com",
       "password": "root",
       "role": "admin"
- "venues": [
+    }
+  ],
+  "venues": [
     {
       "id": "2",
       "name": "The Conference Hub",
@@ -16,12 +18,11 @@
       "capacity": "300",
       "description": "Premier corporate event space.",
       "image_urls": [
-        "https://tinyurl.com/bdh9vs3j",  // <-- Yahan comma lagana zaroori hai
+        "https://tinyurl.com/bdh9vs3j",
         "https://tinyurl.com/6h5y8ftc"
       ],
       "image": "https://tinyurl.com/bdh9vs3j"
-    }
-  ],
+    },
     {
       "id": "3",
       "name": "The Skylight Conservatory",
