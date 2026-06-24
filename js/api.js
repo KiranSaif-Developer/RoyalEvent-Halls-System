@@ -1,4 +1,5 @@
 const BIN_URL = 'https://api.jsonbin.io/v3/b/6a3c2408da38895dfef8e2ef';
+const API_KEY = '$2a$10$jXZH5q6tHcuU32mDjyCspOYf.np3avwl8raUQoM0ShCAuEDqHGY4y';
 
 // Helper function: JSONBin se poora data read karne ke liye
 const fetchBinData = async () => {
