@@ -1,10 +1,13 @@
 const BIN_URL = 'https://api.jsonbin.io/v3/b/6a3c2408da38895dfef8e2ef';
-const API_KEY = '$2a$10$jXZH5q6tHcuU32mDjyCspOYf.np3avwl8raUQoM0ShCAuEDqHGY4y';
+const API_KEY = '$2a$10$jXZH5q6tHcuU32mDjyCspOYf.np3avwl8raUQoM0ShCAuEDqHGY4y'; // <-- API KEY YAHAN DAALNI HAI!
 
 // Helper function: JSONBin se poora data read karne ke liye
 const fetchBinData = async () => {
     const response = await fetch(BIN_URL, {
-        headers: { "X-Bin-Meta": "false" }
+        headers: { 
+            "X-Bin-Meta": "false",
+            "X-Master-Key": API_KEY  // <-- Chabi laga di
+        }
     });
     if (!response.ok) throw new Error("JSONBin fetch failed");
     return await response.json();
@@ -14,12 +17,17 @@ const fetchBinData = async () => {
 const updateBinData = async (newData) => {
     const response = await fetch(BIN_URL, {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+            'Content-Type': 'application/json',
+            "X-Master-Key": API_KEY // <-- Yahan bhi chabi laga di
+        },
         body: JSON.stringify(newData)
     });
     if (!response.ok) throw new Error("JSONBin update failed");
     return await response.json();
 };
+
+// ... ISKE NEECHE WALA BAQI SARA CODE WAISE HI REHNE DO (export const getData... wagera) ...
 
 export const getData = async (endpoint, id = null) => {
     try {
