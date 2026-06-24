@@ -17,8 +17,10 @@
       "rate": "20000",
       "capacity": "300",
       "description": "Premier corporate event space.",
-      "image_urls": ["https://picsum.photos/200"],
-      "image": "https://picsum.photos/200"
+      "image_urls": ["https://tinyurl.com/bdh9vs3j"
+       "https://tinyurl.com/6h5y8ftc"
+      ],
+      "image": "https://tinyurl.com/bdh9vs3j"
     },
     {
       "id": "3",
