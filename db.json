@@ -1,15 +1,8 @@
 {
   "users": [
     {
-      "id": "Leo Johnson",
-      "email": "test@example.com",
-      "password": "...",
-      "role": "client",
-      "phone": "555-123-4567"
-    },
-    {
       "id": "1",
-      "name": "Admin User",
+      "name": "Admin",
       "email": "admin@venue.com",
       "password": "root",
       "role": "admin"
@@ -19,13 +12,13 @@
     {
       "id": "2",
       "name": "The Conference Hub",
-      "location": "West Side Business Park, Suite 402",
+      "location": "West Side Business Park",
       "price": "20000",
       "rate": "20000",
       "capacity": "300",
-      "description": "The Conference Hub is a premier, state-of-the-art venue designed to host impactful corporate events and professional gatherings.",
-      "image_urls": ["https://i.pinimg.com/1200x/13/43/f9/1343f9a195cbdc2e437c0f833f460866.jpg"],
-      "image": "https://i.pinimg.com/1200x/13/43/f9/1343f9a195cbdc2e437c0f833f460866.jpg"
+      "description": "Premier corporate event space.",
+      "image_urls": ["https://picsum.photos/200"],
+      "image": "https://picsum.photos/200"
     },
     {
       "id": "3",
@@ -34,9 +27,9 @@
       "price": "30000",
       "rate": "30000",
       "capacity": "240",
-      "description": "The Skylight Conservatory aik aisi jagah hai jahan architecture aur nature ka haseen milap hota hai.",
-      "image_urls": ["https://i.pinimg.com/1200x/55/8d/08/558d08379862f225d10472a470fee331.jpg"],
-      "image": "https://i.pinimg.com/1200x/55/8d/08/558d08379862f225d10472a470fee331.jpg"
+      "description": "Glass structure with natural light.",
+      "image_urls": ["https://picsum.photos/201"],
+      "image": "https://picsum.photos/201"
     },
     {
       "id": "4",
@@ -45,20 +38,20 @@
       "price": "85000",
       "rate": "85000",
       "capacity": "500",
-      "description": "The Foundry Loft is a unique, industrial-chic space that blends urban heritage with modern luxury.",
-      "image_urls": ["https://i.pinimg.com/736x/f4/57/eb/f457ebb2141abb19e00c5c2b0c24c5c7.jpg"],
-      "image": "https://i.pinimg.com/736x/f4/57/eb/f457ebb2141abb19e00c5c2b0c24c5c7.jpg"
+      "description": "Industrial-chic luxury space.",
+      "image_urls": ["https://picsum.photos/202"],
+      "image": "https://picsum.photos/202"
     },
     {
       "id": "5",
       "name": "The Mariner's Deck",
-      "location": "South Pier 7, Waterfront Boardwalk",
+      "location": "South Pier 7",
       "price": "53000",
       "rate": "53000",
       "capacity": "290",
-      "description": "The Mariner's Deck is an exquisite waterfront venue and lounge designed for those who seek adventure and relaxation.",
-      "image_urls": ["https://i.pinimg.com/1200x/67/59/8f/67598ff1b40e4aaede10364fb577034c.jpg"],
-      "image": "https://i.pinimg.com/1200x/67/59/8f/67598ff1b40e4aaede10364fb577034c.jpg"
+      "description": "Exquisite waterfront venue.",
+      "image_urls": ["https://picsum.photos/203"],
+      "image": "https://picsum.photos/203"
     },
     {
       "id": "6",
@@ -67,55 +60,43 @@
       "price": "78000",
       "rate": "78000",
       "capacity": "400",
-      "description": "Zen Garden House is a sanctuary of peace and minimalist beauty inspired by traditional Japanese aesthetics.",
-      "image_urls": ["https://i.pinimg.com/736x/d1/cb/47/d1cb476012b0bd944dd358848ef1e12f.jpg"],
-      "image": "https://i.pinimg.com/736x/d1/cb/47/d1cb476012b0bd944dd358848ef1e12f.jpg"
+      "description": "Sanctuary of minimalist beauty.",
+      "image_urls": ["https://picsum.photos/204"],
+      "image": "https://picsum.photos/204"
     },
     {
       "id": "0dd4",
       "name": "The Willow Creek Hall",
-      "location": "45 River View Drive, Suburbia",
+      "location": "45 River View Drive",
       "price": "67000",
       "rate": "67000",
       "capacity": "350",
-      "description": "A charming, rustic venue ideal for mid-sized gatherings, birthday parties, and acoustic concerts.",
-      "image_urls": ["https://i.pinimg.com/736x/b1/29/29/b129298d985556d07a0ee2d735b7ee2c.jpg"],
-      "image": "https://i.pinimg.com/736x/b1/29/29/b129298d985556d07a0ee2d735b7ee2c.jpg"
+      "description": "Charming and rustic venue.",
+      "image_urls": ["https://picsum.photos/205"],
+      "image": "https://picsum.photos/205"
     },
     {
       "id": "7879",
       "name": "Qasar-e-Noor",
-      "location": "One Unit Chawk Bahwalpur",
+      "location": "One Unit Chawk BWP",
       "price": "75000",
       "rate": "75000",
       "capacity": "400",
-      "description": "Qasar-e-Noor is an epitome of royal grandeur and architectural brilliance, combining classical eastern heritage.",
-      "image_urls": ["https://i.pinimg.com/1200x/c1/79/89/c1798951829920d6ce16579aa8d4b036.jpg"],
-      "image": "https://i.pinimg.com/1200x/c1/79/89/c1798951829920d6ce16579aa8d4b036.jpg"
+      "description": "Epitome of royal grandeur.",
+      "image_urls": ["https://picsum.photos/206"],
+      "image": "https://picsum.photos/206"
     },
     {
       "id": "a31f",
       "name": "The Serenity Retreat",
-      "location": "Hillside Avenue, Margalla Foothills, Islamabad",
+      "location": "Margalla Hills Islamabad",
       "price": "20000",
       "rate": "20000",
       "capacity": "200",
-      "description": "A peaceful escape featuring panoramic mountain views, open-air yoga decks, and minimalist eco-friendly cabins.",
-      "image_urls": ["https://i.pinimg.com/1200x/bc/ed/83/bced831302f3e0a5690126df232a964b.jpg"],
-      "image": "https://i.pinimg.com/1200x/bc/ed/83/bced831302f3e0a5690126df232a964b.jpg"
+      "description": "Peaceful escape with mountain views.",
+      "image_urls": ["https://picsum.photos/207"],
+      "image": "https://picsum.photos/207"
     }
   ],
-  "bookings": [
-    {
-      "id": "cd1e",
-      "venue_id": "2",
-      "client_id": "1dd3",
-      "client_name_at_booking": "KIRANSAIF.GUL",
-      "client_phone_at_booking": "03464355105",
-      "start_time": "2026-01-16T08:46:00.000Z",
-      "end_time": "2026-01-14T08:46:00.000Z",
-      "status": "rejected",
-      "requested_on": "2026-01-05T08:46:59.585Z"
-    }
-  ]
+  "bookings": []
 }
