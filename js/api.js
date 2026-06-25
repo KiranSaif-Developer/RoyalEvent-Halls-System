@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://6958e4136c3282d9f1d60e74.mockapi.io/event-booking';
+const API_BASE_URL = 'http://localhost:3000';
 export const getData = async (endpoint, id = null) => {
     const url = id ? `${API_BASE_URL}/${endpoint}/${id}` : `${API_BASE_URL}/${endpoint}`;
     try {
