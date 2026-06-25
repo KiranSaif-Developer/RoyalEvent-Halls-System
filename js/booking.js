@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 3. Venue ki details display karna
     try {
         const venues = await apiService.fetchVenues();
-        const venue = venues.find(v => v.id == venueId);
+        const venue = venues.find(v => String(v.id) === String(venueId));
         if (venue) {
             document.getElementById('venue-name-display').textContent = `Request for ${venue.name}`;
         }
@@ -32,28 +32,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     bookingForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
+        // ✨ FIXED: Admin dashboard ke mutabiq keys ko update kiya hai (client_id aur venue_id)
         const bookingData = {
-            venueId: venueId,
-            clientId: session ? session.id : "guest",
+            venue_id: String(venueId),
+            venueId: String(venueId), // Dono rakh dete hain taake safe rahe
+            client_id: session ? String(session.id) : "guest", 
+            clientId: session ? String(session.id) : "guest",
             clientName: document.getElementById('client_name').value,
             clientPhone: document.getElementById('client_phone').value,
             startTime: document.getElementById('start_time').value,
             endTime: document.getElementById('end_time').value,
-            status: "pending", // Shuru mein pending hoga
+            status: "pending", 
             requestDate: new Date().toISOString()
         };
 
         try {
-            // Hum apiService mein createBooking ka function call karenge
+            console.log("Booking data send hone laga hai:", bookingData); // Debugging line
             await apiService.createBooking(bookingData);
+            
             document.getElementById('message').style.color = "green";
             document.getElementById('message').textContent = "Success! Your request has been sent to the Admin.";
             
-            // 3 second baad wapis index par bhej dein
             setTimeout(() => {
                 window.location.href = 'index.html';
             }, 3000);
         } catch (error) {
+            console.error("Booking create error:", error);
             document.getElementById('message').style.color = "red";
             document.getElementById('message').textContent = "Booking failed. Please try again.";
         }
