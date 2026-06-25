@@ -1,129 +1,61 @@
-const API_BASE_URL = 'https://6958e4136c3282d9f1d60e74.mockapi.io/event-booking/data/1';
+import { apiService } from './api.js';
 
-// Server se poora data object lane ka helper function
-const fetchServerData = async () => {
-    const response = await fetch(API_BASE_URL);
-    if (!response.ok) throw new Error("MockAPI fetch failed");
-    return await response.json();
-};
+document.addEventListener('DOMContentLoaded', async () => {
+    // 1. URL se Venue ID nikalna
+    const urlParams = new URLSearchParams(window.location.search);
+    const venueId = urlParams.get('id');
+    const session = JSON.parse(localStorage.getItem('userSession'));
 
-// Server par updated data push karne ka helper function
-const updateServerData = async (newData) => {
-    const response = await fetch(API_BASE_URL, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newData)
-    });
-    if (!response.ok) throw new Error("MockAPI update failed");
-    return await response.json();
-};
+    if (!venueId) {
+        window.location.href = 'index.html';
+        return;
+    }
 
-export const getData = async (endpoint, id = null) => {
+    // 2. User ka naam pehle se fill karna
+    if (session) {
+        document.getElementById('client_name').value = session.name;
+    }
+
+    // 3. Venue ki details display karna
     try {
-        const data = await fetchServerData();
-        const array = data[endpoint] || [];
-        if (id) {
-            return array.find(item => String(item.id) === String(id)) || null;
+        const venues = await apiService.fetchVenues();
+        const venue = venues.find(v => v.id == venueId);
+        if (venue) {
+            document.getElementById('venue-name-display').textContent = `Request for ${venue.name}`;
         }
-        return array;
-    } catch (error) {
-        console.error(`API Get Error (${endpoint}):`, error);
-        return id ? null : []; 
-    }
-};
-
-export const postData = async (endpoint, payload) => {
-    try {
-        const data = await fetchServerData();
-        if (!data[endpoint]) data[endpoint] = [];
-        if (!payload.id) payload.id = String(Date.now());
-        
-        data[endpoint].push(payload);
-        await updateServerData(data);
-        return payload;
-    } catch (error) {
-        console.error(`API Post Error (${endpoint}):`, error);
-        throw error;
-    }
-};
-
-export const putData = async (endpoint, id, payload) => {
-    try {
-        const data = await fetchServerData();
-        const array = data[endpoint] || [];
-        const index = array.findIndex(item => String(item.id) === String(id));
-        
-        if (index !== -1) {
-            array[index] = { ...array[index], ...payload };
-            await updateServerData(data);
-            return array[index];
-        }
-        throw new Error("Item not found for update");
-    } catch (error) {
-        console.error(`API Put Error (${endpoint}):`, error);
-        throw error;
-    }
-};
-
-export const deleteData = async (endpoint, id) => {
-    try {
-        const data = await fetchServerData();
-        const array = data[endpoint] || [];
-        
-        data[endpoint] = array.filter(item => String(item.id) !== String(id));
-        await updateServerData(data);
-        return { success: true };
-    } catch (error) {
-        console.error(`API Delete Error (${endpoint}):`, error);
-        throw error;
-    }
-};
-
-// --- Baqi Saare Target Exports ---
-export const fetchUsers = () => getData('users');
-export const fetchUserById = (id) => getData('users', id);
-export const createUser = (userData) => postData('users', userData);
-export const updateUser = (id, data) => putData('users', id, data);
-
-export const fetchVenues = () => getData('venues');
-export const fetchVenueById = (id) => getData('venues', id); 
-
-export const createVenue = (venueData) => postData('venues', venueData);
-export const updateVenue = (id, data) => putData('venues', id, data);
-export const deleteVenue = (id) => deleteData('venues', id);
-
-export const fetchAllBookings = () => getData('bookings');
-export const createBooking = (bookingData) => postData('bookings', bookingData);
-
-export const updateBookingStatus = async (id, newStatus) => {
-    try {
-        const data = await fetchServerData();
-        const bookings = data.bookings || [];
-        const booking = bookings.find(b => String(b.id) === String(id));
-        if (booking) {
-            booking.status = newStatus;
-            await updateServerData(data);
-            return booking;
-        }
-        throw new Error("Booking not found");
     } catch (err) {
-        console.error("Status update failed:", err);
+        console.error("Venue detail fetch error:", err);
     }
-};
 
-export const fetchBookingsByClientId = async (clientId) => {
-    try {
-        const data = await fetchServerData();
-        const bookings = data.bookings || [];
-        return bookings.filter(b => String(b.client_id) === String(clientId));
-    } catch (err) { 
-        return []; 
-    }
-};
+    // 4. Form Submit Handler
+    const bookingForm = document.getElementById('simple-booking-form');
+    bookingForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const bookingData = {
+            venueId: venueId,
+            clientId: session ? session.id : "guest",
+            clientName: document.getElementById('client_name').value,
+            clientPhone: document.getElementById('client_phone').value,
+            startTime: document.getElementById('start_time').value,
+            endTime: document.getElementById('end_time').value,
+            status: "pending", // Shuru mein pending hoga
+            requestDate: new Date().toISOString()
+        };
 
-export const apiService = {
-    getData, postData, putData, deleteData,
-    fetchUsers, fetchUserById, createUser, updateUser,
-    fetchVenues, fetchVenueById, createVenue, updateVenue, deleteVenue,
-    fetchAllBookings, createBooking, updateBookingStatus, fetchBookingsByClientId
-};
+        try {
+            // Hum apiService mein createBooking ka function call karenge
+            await apiService.createBooking(bookingData);
+            document.getElementById('message').style.color = "green";
+            document.getElementById('message').textContent = "Success! Your request has been sent to the Admin.";
+            
+            // 3 second baad wapis index par bhej dein
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 3000);
+        } catch (error) {
+            document.getElementById('message').style.color = "red";
+            document.getElementById('message').textContent = "Booking failed. Please try again.";
+        }
+    });
+});
